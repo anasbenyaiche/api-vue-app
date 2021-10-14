@@ -12,4 +12,4 @@ const deletePerson = async (_id) => await Person.findByIdAndDelete({_id})
 const editPerson = async (_id,payload) => await Person.findByIdAndUpdate({_id}, {...payload})
 
 
-export default { getPersons, getOnePersons, addPerson, deletePerson, editPerson };
+export default { getPersons, getOnePersons  , addPerson, deletePerson, editPerson };

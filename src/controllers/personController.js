@@ -14,14 +14,13 @@ const getAllPersons = async (req,res) => {
 }
 
 const createPerson = async (req,res) => {
-    
-        const newPerson = req.body
+        const newPerson = req.body.person
+        console.log(req.body.person)
     try {
        const person = await  PersonService.addPerson(newPerson)
         res.status(201).send(person)
     } catch (error) {
         res.send({message: 'shit happens' ,error})
-        console.log(error)
     }
 }
 
